@@ -1,32 +1,27 @@
- #include<stdio.h>
+#include <stdio.h>
 
-	void main()
+void main()
 {
-	float T[12];
-	int i, Tmax, Tmin, Tmoy;
+	float Tmin[12], Tmax[12], Tmoy[12];
+	int i;
 
-	printf("veuillez saisir les elements du tbleu \n");
+	printf("Donnez les températures maximales de la région de Nabeul pendant 12 mois de l’année 2020 \n");
 
 	for (i = 1; i <= 12; i++)
 	{
-		printf("T[%d]= ", i);
-		scanf("%f", &T[i]);
+		printf("température maximale de %d/2022= \n", i);
+		scanf("%f", &Tmax[i]);
 	}
-	Tmin = T[0];
+	printf("Donnez les températures minimales de la région de Nabeul pendant 12 mois de l’année 2020 \n");
+	for (i = 1; i <= 12; i++)
+	{
+		printf("température minimale de %d/2022= \n", i);
+		scanf("%f", &Tmin[i]);
+	}
+
 	for (i = 1; i < 12; i++)
 	{
-		if (Tmin > T[i])
-			Tmin = T[i];
+		Tmoy[i] = (Tmax[i] + Tmin[i]) / 2;
+		printf("température moyenne de %d/2022= %f \n", i, Tmoy[i]);
 	}
-	Tmax = T[0];
-	for (i = 1; i <= 12; i++)
-	{
-		if (T[i] > Tmax)
-			Tmax = T[i];
-	}
-	Tmoy = Tmin + Tmax / 2;
-
-	printf("le min des element est:%d,  \n", Tmin);
-	printf("le max des element est:%d, \n", Tmax);
-	printf("le moy des element est:%d", Tmoy);
 }
