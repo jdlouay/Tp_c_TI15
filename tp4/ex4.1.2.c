@@ -13,9 +13,8 @@ void main()
 		q = q / 2;
 		i++;
 	} while (q > 0);
-
 	printf("Donc le nombre decimal %d vaut ", x);
-	for (j = 1; j <= 4; j++)
+	for (j = 1; j < i; j++)
 	{
 		printf("%d", b[j]);
 	}
