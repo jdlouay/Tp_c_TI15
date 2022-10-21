@@ -4,12 +4,15 @@ void main()
 	int n, i, f;
 	printf("entre un nombre");
 	scanf("%d", &n);
-	f = 1;
+	f = calculeFactoriele(n);
+	printf("le factorielle de %d=%d", n, f);
+}
+int calculeFactoriele(int n)
+{
+	int f = 1, i;
 	for (i = 1; i <= n; i++)
 	{
-		printf("%d,%d\n", i, f);
-
 		f = f * i;
 	}
-	printf("le factorielle de %d=%d", n, f);
+	return f;
 }
